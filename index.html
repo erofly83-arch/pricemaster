@@ -674,7 +674,7 @@ small{font-size:var(--fz4);line-height:var(--lh)}
 .ed-toggle:hover{background:var(--blue-d);transform:translateY(-1px)}
 </style>
 </head>
-<body>
+<body style="">
 
 <!-- ════════════════ EDITOR TOGGLE ════════════════ -->
 
@@ -1144,8 +1144,8 @@ small{font-size:var(--fz4);line-height:var(--lh)}
           <span class="screenshot-dot" style="background:#22c55e"></span>
           <span class="screenshot-bar-title">Excel — итоговый отчёт по поставщикам</span>
         </div>
-        <div class="screenshot-img-wrap" onclick="openLightbox('images/excel.jpg')">
-          <img src="/images/tabl.jpg" alt="Сводная таблица Excel — итоговый отчёт ПрайсМастера" loading="lazy">
+        <div class="screenshot-img-wrap" onclick="openLightbox('images/tabl.jpg')">
+          <img src="images/tabl.jpg" alt="Сводная таблица Excel — итоговый отчёт ПрайсМастера" loading="lazy">
           <div class="screenshot-zoom-hint">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
             Нажмите для увеличения
@@ -1202,29 +1202,29 @@ small{font-size:var(--fz4);line-height:var(--lh)}
     </div>
 
     <!-- EXPANDABLE TASKS -->
-    <div id="tasks-more" style="display:none">
+    <div id="tasks-more" style="display: block;">
       <div class="test-grid" style="margin-top:20px">
-        <div class="test-card fi">
+        <div class="test-card fi v">
           <div class="test-result">↓ Ошибки при закупке → 0</div>
           <p class="test-quote">При ручном сопоставлении менеджеры регулярно путали похожие наименования и закупали не тот товар. Автоматическое сопоставление по штрихкодам исключило человеческий фактор полностью.</p>
         </div>
-        <div class="test-card fi d1">
+        <div class="test-card fi d1 v">
           <div class="test-result">↑ Скорость обновления цен в 8 раз</div>
           <p class="test-quote">Раньше актуализация закупочных цен занимала 2–3 дня и делалась раз в месяц. Теперь это делается за 5–7 минут и повторяется еженедельно — цены всегда актуальны.</p>
         </div>
-        <div class="test-card fi d2">
+        <div class="test-card fi d2 v">
           <div class="test-result">↑ Прозрачность для руководства</div>
           <p class="test-quote">Руководитель отдела закупок получает готовый Excel-отчёт с полным сравнением по всем поставщикам. Теперь видно, у кого и почему закупается каждая позиция, и легко обосновать выбор.</p>
         </div>
-        <div class="test-card fi">
+        <div class="test-card fi v">
           <div class="test-result">↓ Зависимость от одного поставщика</div>
           <p class="test-quote">Когда все цены видны в одной таблице, легко заметить, что по ряду позиций есть альтернативы на 10–15% дешевле. Появляется реальный инструмент для переговоров и диверсификации поставок.</p>
         </div>
-        <div class="test-card fi d1">
+        <div class="test-card fi d1 v">
           <div class="test-result">↑ Контроль акций и спецпредложений</div>
           <p class="test-quote">Поставщики периодически делают акционные цены, о которых не всегда сообщают. Регулярный мониторинг позволяет автоматически видеть все изменения и не пропускать выгодные предложения.</p>
         </div>
-        <div class="test-card fi d2">
+        <div class="test-card fi d2 v">
           <div class="test-result">↑ Онбординг новых менеджеров за 1 день</div>
           <p class="test-quote">Новый сотрудник без опыта в Excel осваивает мониторинг цен за один рабочий день. Не нужно передавать «магические таблицы» и объяснять, как они работают — процесс стандартизирован.</p>
         </div>
@@ -1232,10 +1232,7 @@ small{font-size:var(--fz4);line-height:var(--lh)}
     </div>
 
     <div class="tc mt40 fi v">
-      <button id="tasks-toggle-btn" class="btn btn-outline-white btn-lg" onclick="toggleTasks()" style="margin-bottom:16px">
-        <svg id="tasks-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="transition:transform .3s"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        Показать ещё 6 задач
-      </button>
+      <button id="tasks-toggle-btn" class="btn btn-outline-white btn-lg" onclick="toggleTasks()" style="margin-bottom:16px"><svg id="tasks-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="transform:rotate(180deg);transition:transform .3s"><polyline points="6 9 12 15 18 9"></polyline></svg> Скрыть</button>
       <br>
       <a href="#cta" class="btn btn-primary btn-lg">Хочу такие же результаты →</a>
     </div>
@@ -1525,7 +1522,7 @@ small{font-size:var(--fz4);line-height:var(--lh)}
 <!-- ════════════════ LIGHTBOX ════════════════ -->
 <div id="pm-lightbox" onclick="closeLightbox()">
   <button id="pm-lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="pm-lightbox-img" src="" alt="Скриншот программы">
+  <img id="pm-lightbox-img" src="images/tabl.jpg" alt="Скриншот программы">
 </div>
 
 <!-- ════════════════ FOOTER (black) ════════════════ -->
@@ -2060,4 +2057,4 @@ window.notify = notify;
 </script>
 
 
-<div id="pm-notif" style="position: fixed; bottom: 210px; right: 20px; background: rgb(30, 41, 59); color: rgb(241, 245, 249); padding: 10px 16px; border-radius: 8px; font-size: 0.8rem; z-index: 10001; box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 20px; max-width: 300px; transition: opacity 0.3s; pointer-events: none; font-family: -apple-system, sans-serif; line-height: 1.4; opacity: 0;">✅ Файл для сервера сохранён — без кода редактора</div></body></html>
+<div id="pm-notif" style="position: fixed; bottom: 210px; right: 20px; background: rgb(30, 41, 59); color: rgb(241, 245, 249); padding: 10px 16px; border-radius: 8px; font-size: 0.8rem; z-index: 10001; box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 20px; max-width: 300px; transition: opacity 0.3s; pointer-events: none; font-family: -apple-system, sans-serif; line-height: 1.4; opacity: 1;">✏️ Редактор включён. Кликайте на любой элемент.</div></body></html>
